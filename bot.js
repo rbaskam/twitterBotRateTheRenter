@@ -16,13 +16,8 @@ const TH = new Twit({ // Twit Handler
     access_token_secret: '1o60UGZF8OqHbNvf89PvLhb9VFEz2w9a9tHWrOrHdaxPg'
 });
 
-const _self = {
-    id: 893498060663336964,
-    screen_name: 'ratetherenter'
-}
-
 const stream = TH.stream('statuses/filter', {
-    track: ['mortgage', 'rent', 'building', 'house']
+    track: ['ratetherenter', 'www.ratetherenter.co.uk', 'ratetherenter.co.uk']
 });
 
 stream.on('tweet', (tweet) => {
