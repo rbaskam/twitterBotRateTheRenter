@@ -26,16 +26,15 @@ const stream = TH.stream('statuses/filter', {
 });
 
 stream.on('tweet', (tweet) => {
-    TH.post('favourites/create', {
-        id: tweet.id_str
+    TH.post('favorites/create',{
+        id:tweet.id_str
+    },function (err,response) { 
     });
 
-    // if (tweet.user.id == _self.id) {
-    //     TH.post('statuses/retweet/:id', {
-    //         id: tweet.id_str
-    //     });
-    //     return;
-    // }
+    // TH.post('statuses/retweet/:id', {
+    //     id: tweet.id_str
+    // });
+    return; 
 
     // TH.post('statuses/update', {
     //     status: `@${tweet.user.screen_name} Thanks for sharing :)`,
