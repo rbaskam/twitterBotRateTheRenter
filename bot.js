@@ -32,9 +32,9 @@ stream.on('tweet', (tweet) => {
     },function (err,response) { 
     });
 
-    TH.post('statuses/retweet/:id', {
-        id: tweet.id_str
-    });   
+    // TH.post('statuses/retweet/:id', {
+    //     id: tweet.id_str
+    // });   
 
     TH.post('statuses/update', {
         status: `@${tweet.user.screen_name} Thanks for sharing :)`,
