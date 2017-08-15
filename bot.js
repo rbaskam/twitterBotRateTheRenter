@@ -22,7 +22,7 @@ const _self = {
 }
 
 const stream = TH.stream('statuses/filter', {
-    track: ['ratetherenter', 'ratetherenter.co.uk','www.ratetherenter.co.uk']
+    track: ['renting', 'mortgage','house']
 });
 
 stream.on('tweet', (tweet) => {   
@@ -36,10 +36,10 @@ stream.on('tweet', (tweet) => {
     //     id: tweet.id_str
     // });   
 
-    TH.post('statuses/update', {
-        status: `@${tweet.user.screen_name} Thanks for sharing :)`,
-        in_reply_to_status_id: tweet.id_str 
-    });
+//     TH.post('statuses/update', {
+//         status: `@${tweet.user.screen_name} Thanks for sharing :)`,
+//         in_reply_to_status_id: tweet.id_str 
+//     });
 
     return; 
     
