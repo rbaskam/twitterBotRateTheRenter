@@ -26,9 +26,11 @@ const stream = TH.stream('statuses/filter', {
 });
 
 stream.on('tweet', (tweet) => {
+    console.log('Found Tweet');
     TH.post('favorites/create',{
         id:tweet.id_str
     },function (err,response) { 
+        console.log('Error');
     });
 
     // TH.post('statuses/retweet/:id', {
