@@ -7,7 +7,7 @@ app.get('/', function (request, response) {
 }).listen(app.get('port'), function () {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
-
+console.log(process.env)
 const Twit = require('./node_modules/twit');
 const TH = new Twit({ // Twit Handler
      consumer_key => process.env.consumer_key,
