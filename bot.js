@@ -10,10 +10,10 @@ app.get('/', function (request, response) {
 
 const Twit = require('./node_modules/twit');
 const TH = new Twit({ // Twit Handler
-    consumer_key: 'KvtuhanMF4WYLfYprSrzCJlcV',
-    consumer_secret: 'ZrVfxXxjUzz7rJNuWwiVfsfMpoRt9AM2pH6fnPN0kjEvyka9vD',
-    access_token: '893498060663336964-mRDZqnc09mwxLoOL9RUX9ATMlsoIcGH',
-    access_token_secret: '1o60UGZF8OqHbNvf89PvLhb9VFEz2w9a9tHWrOrHdaxPg'
+     consumer_key: ENV['consumer_key'],
+    consumer_secret: ENV['consumer_secret'],
+    access_token: ENV['access_token'],
+    access_token_secret: ENV['access_token_secret']
 });
 
 const _self = {
