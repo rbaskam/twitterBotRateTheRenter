@@ -22,7 +22,7 @@ const _self = {
 }
 
 const stream = TH.stream('statuses/filter', {
-    track: ['renting', 'mortgage', 'estate', 'estate-agent']
+    track: ['renting', 'mortgage', 'estate-agent', 'subletting']
 });
 
 stream.on('tweet', (tweet) => {   
